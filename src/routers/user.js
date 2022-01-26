@@ -1,11 +1,11 @@
 // Setup routers
-import express from 'express';
-import User from '../models/user.js';
+const express = require('express');
+const multer = require('multer');
+const sharp = require('sharp');
+const User = require('../models/user');
+const auth = require('../middleware/auth.js');
+const { sendWelcomeEmail, sendCancelationEmail } = require('../emails/account.js');
 const router = express.Router();
-import auth from '../middleware/auth.mjs'
-import multer from 'multer';
-import sharp from'sharp';
-import { sendWelcomeEmail, sendCancelationEmail } from '../emails/account.mjs';
 
 // Signup
 router.post('/users', async (req, res) => {
@@ -149,4 +149,4 @@ router.get('/users/:id/avatar', async (req, res) => {
     }
 })
 
-export default router;
+module.exports = router;

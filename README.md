@@ -50,16 +50,22 @@ for Google + Facebook and maybe others (Github?).
 ```
 // Show user
 /users/me     [GET] ✅
+
 // Show user by id
 /users/:id      [GET] ✅
+
 // Edit patch users
 /users/me     [PATCH] ✅
+
 // Delete user
 /users/me     [DELETE] ✅
+
 // Change avatar
 /users/me/avatar      [POST] ✅
+
 // Show avatat
 /users/me/avatar      [GET] ✅
+
 // Edit
 /users/edit/:id       [POST] ✅
 ```
@@ -70,18 +76,23 @@ for Google + Facebook and maybe others (Github?).
 ```
 // Add Task
 /tasks     [POST] ✅
+
 // Filter Tasks
 // GET completed
 /tasks?completed=true      [POST] ✅
+
 // GET by limit & skip
 /tasks?limit=10&skip=20     [POST] ✅
+
 // GET sortBy createdAt:desc
 /tasks?sortBy=createdAt:desc     [POST] ✅
 
 // Show task by id
 /tasks/:id      [GET] ✅
+
 // Edit patch tasks
 /tasks/:id     [PATCH] ✅
+
 // Delete task
 /tasks/:id      [DELETE] ✅
 ```
